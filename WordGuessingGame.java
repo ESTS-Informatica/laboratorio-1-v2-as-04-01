@@ -21,17 +21,22 @@ public class WordGuessingGame
 
     String getHiddenWord()
     {
-        return hiddenWord;
+        return this.hiddenWord;
     }
 
     String getGuessedWord()
     {
-        return guessedWord;
+        return this.guessedWord;
     }
 
     int getNumberOfTries()
     {
-        return numberOfTries;
+        return this.numberOfTries;
+    }
+
+    void showGuessedWord()
+    {
+        System.out.println("Palavrs adivinhada: " + this.guessedWord);
     }
     
 }
