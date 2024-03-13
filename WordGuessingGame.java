@@ -19,5 +19,19 @@ public class WordGuessingGame
         this.guessedWord = "___";
     }
 
+    String getHiddenWord()
+    {
+        return hiddenWord;
+    }
+
+    String getGuessedWord()
+    {
+        return guessedWord;
+    }
+
+    int getNumberOfTries()
+    {
+        return numberOfTries;
+    }
     
 }
