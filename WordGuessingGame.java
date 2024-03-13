@@ -12,6 +12,8 @@ public class WordGuessingGame
     private String guessedWord;
     private int numberOfTries;
 
+    InputReader reader;
+
 
     public WordGuessingGame()
     {
