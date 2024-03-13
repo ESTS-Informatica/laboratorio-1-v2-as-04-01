@@ -51,7 +51,7 @@ public class WordGenerartor
     
     public void addWord(String newWord)
     {
-        if(newWord != null || newWord != "")
+        if(newWord != null && newWord != "")
         {
             for(int i = 0; i < words.size(); i++)
             {
