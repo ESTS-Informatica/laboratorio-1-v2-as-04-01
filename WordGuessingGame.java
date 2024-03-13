@@ -36,7 +36,7 @@ public class WordGuessingGame
 
     void showGuessedWord()
     {
-        System.out.println("Palavrs adivinhada: " + this.guessedWord);
+        System.out.println("Palavras adivinhada: " + this.guessedWord);
     }
     
 }
