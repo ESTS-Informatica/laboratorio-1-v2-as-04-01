@@ -12,11 +12,14 @@ public class WordGuessingGame
     private String guessedWord;
     private int numberOfTries;
 
+    InputReader reader;
+
 
     public WordGuessingGame()
     {
         this.hiddenWord = "abc";
         this.guessedWord = "___";
+        this.reader = new InputReader();
     }
 
     String getHiddenWord()
@@ -39,4 +42,37 @@ public class WordGuessingGame
         System.out.println("Palavras adivinhada: " + this.guessedWord);
     }
     
+    public void play()
+    {
+        showWelcome();
+
+        showGuessedWord();
+
+        guess(reader.getChar(guessedWord));
+
+        if (guessedWord.equals(hiddenWord)) {
+            showResult();
+        }
+
+    }
+
+    private void showWelcome()
+    {
+        System.err.println("Welcome!");
+    }
+
+    private void guess(char character)
+    {
+        for(char letter: this.hiddenWord.toCharArray())
+        {
+            if (character == letter) {
+                this.guessedWord.replace(letter, character);
+            } 
+        }
+    }
+
+    private void showResult()
+    {
+        System.err.println("Número de tentativas: " + this.numberOfTries);
+    }
 }
